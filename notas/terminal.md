@@ -27,3 +27,13 @@ git status --> ver el estado del repositorio
 git add --> añade un archivo o directorio al repositorio
 git commit -m --> añade un commit con un comentario.
 git log --oneline --> ver el log de git.
+git switch -c nombre-rama --> crear una nueva rama con el nombre de rama
+git clone <url> --> descarga un repositorio entero con todo su historial.
+
+# otros comandos de git
+
+git diff                       # qué ha cambiado y no está en staging
+git diff --staged              # qué está en staging y entrará en el commit
+git restore archivo.sql        # descartar cambios no guardados de un archivo
+git restore --staged archivo   # sacar un archivo de staging sin perder los cambios
+git revert <hash>              # crear un commit que deshace otro commit
