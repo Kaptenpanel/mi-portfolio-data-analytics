@@ -72,3 +72,24 @@ git restore archivo.sql        # descartar cambios no guardados de un archivo
 git restore --staged archivo   # sacar un archivo de staging sin perder los cambios
 
 git revert <hash>              # crear un commit que deshace otro commit
+
+### flujo para volver a rama principal y borrar rama anterior
+
+git switch master
+
+git pull git branch -d nombre_rama
+
+### flujo para trabajo diario
+
+```
+git switch main
+git pull                                  # 1. partir de la última versión
+git switch -c practica-2-1-3              # 2. rama para el trabajo nuevo
+# ... trabajamos, editamos archivos ...
+git status                                # 3. qué ha cambiado
+git add .                                 # 4. preparar
+git commit -m "Completar práctica 2.1.3"  # 5. guardar la foto
+git push -u origin practica-2-1-3         # 6. subir la rama
+# 7. abrir el pull request en GitHub, revisar y fusionar
+# 8. volver a main y hacer git pull
+```
