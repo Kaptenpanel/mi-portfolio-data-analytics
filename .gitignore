@@ -7,6 +7,7 @@ __pycache__/
 
 # Credenciales y variables de entorno: NUNCA a GitHub
 .env
+.markdownlint.json
 
 # Archivos del sistema operativo
 .DS_Store

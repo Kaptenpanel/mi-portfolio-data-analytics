@@ -93,3 +93,37 @@ git push -u origin practica-2-1-3         # 6. subir la rama
 # 7. abrir el pull request en GitHub, revisar y fusionar
 # 8. volver a main y hacer git pull
 ```
+
+## Venv de python
+
+Cada vez que se entra en la carpeta hay que ejecutar:
+```source .venv/bin/activate```
+para activar el entorno virtual de python.
+
+### jupyter labs
+
+Como Zed tiene problemas con los notebooks de jupyter
+(hay que usar repl y es un rollo), es mejor utilizar
+jupyter labs por si: ```python -m jupyter lab```
+
+## postgresql
+
+Para iniciar el servicio:
+
+```sudo launchctl load /Library/LaunchDaemons/postgresql-18.plist```
+
+Y se comprueba con:
+
+```sudo launchctl list | grep postgresql```
+
+```/Library/PostgreSQL/18/bin/pg_isready -h localhost -p 5432```
+
+Debe responder que está aceptando conexiones.
+
+### para habilitar el servicio
+
+```sudo launchctl enable system/postgresql-18```
+
+Y para comprobar que está habilitado:
+
+```sudo launchctl print-disabled system | grep postgresql-18```
