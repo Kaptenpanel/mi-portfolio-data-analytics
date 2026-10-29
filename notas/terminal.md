@@ -22,7 +22,7 @@ Mkdir "" --> crea la carpeta ""
 
 Touch "".'' --> Crea el archivo "".''
 
-Cat "__" --> muestra el contenido de "__"
+Cat "\__" --> muestra el contenido de "__"
 
 Cp origen destino copia el archivo en origen al destino
 
@@ -99,12 +99,6 @@ git push -u origin practica-2-1-3         # 6. subir la rama
 Cada vez que se entra en la carpeta hay que ejecutar:
 ```source .venv/bin/activate```
 para activar el entorno virtual de python.
-
-### jupyter labs
-
-Como Zed tiene problemas con los notebooks de jupyter
-(hay que usar repl y es un rollo), es mejor utilizar
-jupyter labs por si: ```python -m jupyter lab```
 
 ## postgresql
 
